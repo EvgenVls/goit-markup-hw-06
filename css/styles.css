@@ -79,6 +79,10 @@ body {
 .page-header {
     padding-top: 16px;
     padding-bottom: 16px;
+    border-bottom: 1px solid #E7E9FC;
+    box-shadow: 0px 1px 6px 0px rgba(46, 47, 66, 0.08),
+        0px 1px 1px 0px rgba(46, 47, 66, 0.16),
+        0px 2px 1px 0px rgba(46, 47, 66, 0.08);
 }
 
 .page-header-container {
@@ -95,7 +99,6 @@ body {
     letter-spacing: 0.03em;
     text-transform: uppercase;
     color: #4D5AE5;
-    padding: 16px 0;
     margin-right: 76px;
 }
 
@@ -227,7 +230,7 @@ body {
 }
 /* ============ /MOBILE MENU STYLES ============ */
 
-/* ============ HERO MOBILE STYLES ============ */
+/* ============ MOBILE HERO STYLES ============ */
 
 .hero {
     max-width: 320px;
@@ -282,17 +285,17 @@ body {
     background: #404BBF;
 }
 
-@media (min-resolution: 192dpi) {
-    .hero-content {
+@media screen and (min-resolution: 192dpi) {
+    .hero {
         background-image: linear-gradient(
             rgba(46, 47, 66, 0.70), 
             rgba(46, 47, 66, 0.70)), 
             url(../images/hero_bg_mob@2x.jpg);
         }
 }
-/* ============ /HERO MOBILE STYLES ============ */
+/* ============ /MOBILE HERO STYLES ============ */
 
-/* ============ FEATURES MOBILE STYLES ============ */
+/* ============ MOBILE FEATURES STYLES ============ */
 .features-list {
     display: flex;
     flex-direction: column;
@@ -314,13 +317,14 @@ body {
 }
 
 .features-list-item-text {
+    font-style: 16px;
     font-weight: 500;
     line-height: 1.5;
     letter-spacing: 0.02em;
 }
-/* ============ /FEATURES MOBILE STYLES ============ */
+/* ============ /MOBILE FEATURES STYLES ============ */
 
-/* ============ TEAM MOBILE STYLES ============ */
+/* ============ MOBILE TEAM STYLES ============ */
 .team {
     background: #F4F4FD;
 }
@@ -401,9 +405,9 @@ body {
 .social-icon-link:focus {
     background-color: #404BBF;
 }
-/* ============ /TEAM MOBILE STYLES ============ */
+/* ============ /MOBILE TEAM STYLES ============ */
 
-/* ============ PORTFOLIO MOBILE STYLES ============ */
+/* ============ MOBILE PORTFOLIO STYLES ============ */
 .portfolio-title {
     text-align: center;
     font-size: 36px;
@@ -441,7 +445,7 @@ body {
         font-size: 20px;
         font-weight: 500;
         line-height: 1.2;
-        letter-spacing: 0.4px;
+        letter-spacing: 0.02em;
         color: #2E2F42;
         margin-bottom: 8px;
 }
@@ -477,9 +481,9 @@ body {
 .portfolio-list-item:hover .overlay-text {
     transform: translateY(0%);
 }
-/* ============ /PORTFOLIO MOBILE STYLES ============ */
+/* ============ /MOBILE PORTFOLIO STYLES ============ */
 
-/* ============ FOOTER MOBILE STYLES ============ */
+/* ============ MOBILE FOOTER STYLES ============ */
 .footer {
     background: #2E2F42;
     padding: 96px 0;
@@ -488,7 +492,7 @@ body {
 .footer-content {
     display: flex;
     flex-direction: column;
-    gap: 72px;
+    row-gap: 72px;
 }
 
 .footer .logo-web {
@@ -508,7 +512,6 @@ body {
     letter-spacing: 0.03em;
     text-transform: uppercase;
     color: #F4F4FD;
-    margin-bottom: 16px;
 }
 
 .footer-text {
@@ -584,7 +587,7 @@ body {
     width: 288px;
     height: 40px;
     border-radius: 4px;
-    border: 1px solid #FFFFFF;
+    border: 1px solid rgba(255, 255, 255, 0.3);
     padding-left: 16px;
     font-size: 12px;
     font-weight: 400;
@@ -599,7 +602,7 @@ body {
 }
 
 .subscribe-field::placeholder {
-    color: #FFFFFF;
+    color: rgba(255, 255, 255, 0.3);
 }
 
 .subscribe-btn {
@@ -630,7 +633,7 @@ body {
     outline-color: transparent;
     outline-offset: 4px;
 }
-/* ============ /FOOTER MOBILE STYLES ============ */
+/* ============ /MOBILE FOOTER STYLES ============ */
 
 /* ============ BACKDROP STYLES ============ */
 .backdrop {
@@ -835,13 +838,17 @@ body {
     outline-offset: 2px;
 }
 
-.modal-form-checkbox:checked+.modal-form-checkbox-label .modal-form-own-checkbox {
+.modal-form-checkbox:checked+
+.modal-form-checkbox-label 
+.modal-form-own-checkbox {
     background-color: #404BBF;
     fill: #F4F4FD;
     border: none;
 }
 
-.modal-form-checkbox:focus+.modal-form-checkbox-label .modal-form-own-checkbox {
+.modal-form-checkbox:focus+
+.modal-form-checkbox-label 
+.modal-form-own-checkbox {
     outline: 1px solid #4D5AE5;
     outline-offset: 2px;
 }
@@ -877,31 +884,11 @@ body {
         max-width: 768px;
     }
 
-/* ============ HEADER TABLET STYLES ============ */
+/* ============ TABLET HEADER STYLES ============ */
     .page-header {
         padding: 0;
-        border-bottom: 1px solid  #E7E9FC;
-        box-shadow: 0px 1px 6px 0px rgba(46, 47, 66, 0.08),
-            0px 1px 1px 0px rgba(46, 47, 66, 0.16),
-            0px 2px 1px 0px rgba(46, 47, 66, 0.08);
-    }   
-
-    .nav-list {
-        display: flex;
     }
-
-    .contacts {
-        display: flex;
-    }
-
-    .mobile-menu-open-btn {
-        display: none;
-    }
-
-    .mobile-menu {
-        display: none;
-    }
-
+           
     .nav {
         display: flex;
         align-items: center;
@@ -927,7 +914,16 @@ body {
         transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
     }
     
+    .mobile-menu-open-btn {
+        display: none;
+    }
+    
+    .mobile-menu {
+        display: none;
+    }
+
     .contacts {
+        display: block;
         font-style: normal;
     }
     
@@ -968,9 +964,9 @@ body {
         background-color: #404BBF;
     }
     
-/* ============ /HEADER TABLET STYLES ============ */
+/* ============ /TABLET HEADER STYLES ============ */
 
-/* ============ HERO TABLET STYLES ============ */
+/* ============ TABLET HERO STYLES ============ */
     .hero {
         max-width: 768px;
         background-image: linear-gradient(
@@ -993,16 +989,16 @@ body {
     }
 
     @media (min-resolution: 192dpi) {
-        .hero-content {
+        .hero {
             background-image: linear-gradient(
                 rgba(46, 47, 66, 0.70), 
                 rgba(46, 47, 66, 0.70)), 
                 url(../images/hero_bg_tab@2x.jpg);
             }
     }
-/* ============ /HERO TABLET STYLES ============ */
+/* ============ /TABLET HERO STYLES ============ */
 
-/* ============ FEATURES TABLET STYLES ============ */
+/* ============ TABLET FEATURES STYLES ============ */
     .features-list {
         flex-direction: row;
         flex-wrap: wrap;
@@ -1018,23 +1014,81 @@ body {
     .features-list-item-title {
         text-align:start ;
     }    
-/* ============ /FEATURES TABLET STYLES ============ */
+/* ============ /TABLET FEATURES STYLES ============ */
 
-/* ============ TEAM TABLET STYLES ============ */
-    .team {
-        padding: 0 108px;
-    }
-
+/* ============ TABLET TEAM STYLES ============ */
+    
     .team-list {
         flex-direction: row;
         flex-wrap: wrap;
+        justify-content: center;
         column-gap: 24px;
         row-gap: 64px;
     }
 
-    .team-list-item {}
-/* ============ /TEAM TABLET STYLES ============ */
+    .team-list-item {
+        margin: 0;
+    }
+/* ============ /TABLET TEAM STYLES ============ */
 
+/* ============ TABLET PORTFOLIO STYLES ============ */
+    .portfolio-list {
+        flex-direction: row;
+        flex-wrap: wrap;
+        column-gap: 24px;
+        row-gap: 72px;
+    }
+
+    .portfolio-list-item {
+        width: calc((100% - 24px) / 2);
+    }
+/* ============ /TABLET PORTFOLIO STYLES ============ */
+
+/* ============ TABLET FOOTER STYLES ============ */
+    .footer-content {
+        flex-direction: row;
+        flex-wrap: wrap;
+        align-items: baseline;
+        padding-left: 108px;
+    }
+
+    .footer-slogan {
+        margin-right: 24px;
+    }
+
+    .footer .logo-web {
+        display: inline-block;
+    }
+
+    .footer-text {
+        width: 264px;
+    }
+
+    .social-media-title {
+        text-align: left;
+    }
+
+    .subscribe-form {
+        flex-direction: row;
+        gap: 24px;
+    }
+
+    .subscribe-title {
+        text-align: left;
+    }
+
+    .subscribe-field {
+        width: 264px;
+    }
+/* ============ /TABLET FOOTER STYLES ============ */
+
+/* ============ TABLET-DESKTOP MODAL WINDOW STYLES ============ */
+    .modal {
+        width: 408px;
+        min-height: 584px;
+        padding: 72px 24px 24px;
+    }
+/* ============ /TABLET MODAL WINDOW STYLES ============ */
 }    
 
 @media  screen and (min-width: 1158px) {
@@ -1043,4 +1097,126 @@ body {
         padding-left: 15px;
         padding-right: 15px;
     }
+
+    .section {
+        padding: 120px 0;
+    }
+
+/* ============ DESKTOP HEADER STYLES ============ */
+    .logo-web {
+        margin-right: 76px;
+    }
+
+    .address-list {
+        flex-direction: row;
+        gap: 40px;
+    }
+
+    .address-link {
+        font-style: 16px;
+        line-height: 1.5;
+        letter-spacing: 0.02em;
+    }
+/* ============ /DESKTOP HEADER STYLES ============ */
+
+/* ============ DESKTOP HERO STYLES ============ */
+    .hero {
+        max-width: 1440px;
+        background-image: linear-gradient(rgba(46, 47, 66, 0.70),
+                rgba(46, 47, 66, 0.70)),
+            url(../images/hero_bg.jpg);
+        padding: 188px 0;
+    }
+
+    .hero-title {
+        margin-bottom: 48px;
+    }
+
+    @media screen and (min-resolution: 192dpi) {
+        .hero {
+            background-image: linear-gradient(rgba(46, 47, 66, 0.70),
+                    rgba(46, 47, 66, 0.70)),
+                url(../images/hero_bg@2x.jpg);
+        }
+    }
+/* ============ /DESKTOP HERO STYLES ============ */
+
+/* ============ DESKTOP FEATURES STYLES ============ */
+    .features-list {
+        flex-wrap: nowrap;
+        row-gap: 24px;
+    }
+
+    .features-list-item {
+        width: calc((100% - 3 * 24px) / 4);
+    }
+    
+    .features-icon {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 112px;
+        background: #F4F4FD;
+        border: 1px solid #8E8F99;
+        border-radius: 4px;
+        margin-bottom: 8px;
+    }
+
+    .features-list-item-title {
+        font-size: 20px;
+        font-weight: 500;
+        line-height: 1.2;
+    }
+
+    .features-list-item-text {
+        font-weight: 400;
+    }
+/* ============ /DESKTOP FEATURES STYLES ============ */
+
+/* ============ /DESKTOP TEAM STYLES ============ */
+    .team-list {
+        flex-wrap: nowrap;
+        row-gap: 24px;
+    }
+/* ============ /DESKTOP TEAM STYLES ============ */
+
+/* ============ /DESKTOP PORTFOLIO STYLES ============ */
+    .portfolio-list {
+        row-gap: 48px;
+    }
+
+    .portfolio-list-item {
+        width: calc((100% - 2 * 24px) / 3);
+        border-color: #E7E9FC;
+        box-shadow: none;
+        transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    }
+/* ============ /DESKTOP PORTFOLIO STYLES ============ */
+
+/* ============ DESKTOP FOOTER STYLES ============ */
+    .footer {
+        padding: 100px 0;
+    }
+
+    .footer-content {
+        flex-wrap: nowrap;
+        padding-left: 0;
+    }
+
+    .footer-slogan {
+        margin-right: 120px;
+    }
+
+    .footer-social-media {
+        margin-right: 80px;
+    }
+
+    .subscribe-field {
+        border-color: #FFFFFF;
+    }
+
+    .subscribe-field::placeholder {
+        color: #FFFFFF;
+    }
+/* ============ /DESKTOP FOOTER STYLES ============ */
 }

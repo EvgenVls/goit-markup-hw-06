@@ -252,7 +252,7 @@ body {
 }
 
 .hero-title {
-    max-width: 288px;
+    max-width: 169px;
     text-align: center;
     font-size: 36px;
     font-weight: 700;
@@ -285,7 +285,9 @@ body {
     background: #404BBF;
 }
 
-@media screen and (min-resolution: 192dpi) {
+@media screen and (min-resolution: 192dpi) and (max-width: 767px), 
+        screen and (min-resolution: 2dppx) and (max-width: 767px), 
+        screen and (min-device-pixel-ratio: 2) and (max-width: 767px) {
     .hero {
         background-image: linear-gradient(
             rgba(46, 47, 66, 0.70), 
@@ -988,7 +990,9 @@ body {
         margin: 0 auto 36px;
     }
 
-    @media (min-resolution: 192dpi) {
+    @media screen and (min-resolution: 192dpi) and (min-width: 768px), 
+            screen and (min-resolution: 2dppx) and (min-width: 768px),
+            screen and (min-device-pixel-ratio: 2) and (min-width: 768px) {
         .hero {
             background-image: linear-gradient(
                 rgba(46, 47, 66, 0.70), 
@@ -1132,7 +1136,9 @@ body {
         margin-bottom: 48px;
     }
 
-    @media screen and (min-resolution: 192dpi) {
+    @media screen and (min-resolution: 192dpi) and (min-width: 1158px), 
+        screen and (min-resolution: 2dppx) and (min-width: 1158px),
+        screen and (min-device-pixel-ratio: 2) and (min-width: 1158px) {
         .hero {
             background-image: linear-gradient(rgba(46, 47, 66, 0.70),
                     rgba(46, 47, 66, 0.70)),

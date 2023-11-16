@@ -147,6 +147,11 @@ body {
 
     .mobile-menu-container {
         position: relative;
+        display: flex;
+        flex-direction: column;
+        height: 100%;
+        padding-top: 72px;
+        padding-bottom: 40px;
     }
 
     .mobale-menu-close-btn {
@@ -167,8 +172,7 @@ body {
         display: flex;
         flex-direction: column;
         gap: 40px;
-        padding-top: 72px;
-        margin-bottom: 168px;
+        margin-bottom: auto;
     }
 
     .mobile-menu-item-link {
@@ -1012,7 +1016,7 @@ body {
 
     .features-list-item {
         width: calc((100% - 24px) / 2);
-        height: 120px;
+        /* height: 120px; */
     }
 
     .features-list-item-title {
@@ -1117,7 +1121,7 @@ body {
     }
 
     .address-link {
-        font-style: 16px;
+        font-size: 16px;
         line-height: 1.5;
         letter-spacing: 0.02em;
     }
